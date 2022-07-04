@@ -19,7 +19,7 @@ const retrieveClusterCredential = async (tke) => {
     req.ClusterId = tke.clusterId;
 
     return new Promise((resolve, reject) => {
-        client.DescribeClusterSecurity(req, (err, data) => {
+        client.DescribeEKSClusterCredential(req, (err, data) => {
             if (err) {
                 return reject(err);
             } else {
